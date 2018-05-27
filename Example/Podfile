@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TextViewWithThreshHoldFrame_Example' do
+  pod 'TextViewWithThreshHoldFrame', :path => '../'
+
+  target 'TextViewWithThreshHoldFrame_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
