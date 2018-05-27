@@ -7,12 +7,16 @@ open class TextViewWithHeightThreshHold: UITextView {
     private let defaultThreshHold: CGFloat = 100
     @IBInspectable public var heightThreshHold: CGFloat = 100
     public var isHeightThreshHoldActive : Bool {
-        get { return textViewHeightConstraint.isActive }
-        set { textViewHeightConstraint.isActive = newValue }
+        get { return threshHoldConstraint.isActive }
+        set { threshHoldConstraint.isActive = newValue }
     }
     internal var lastCharCount = 0
     internal var initialHeight: CGFloat = 33
     internal var textViewHeightConstraint: NSLayoutConstraint!
+    internal var threshHoldConstraint: NSLayoutConstraint!
+    open override var text: String! {
+        didSet { lastCharCount = oldValue.count }
+    }
     
     internal var isIncreasing: Bool {
         return self.text.count > lastCharCount
@@ -27,21 +31,23 @@ open class TextViewWithHeightThreshHold: UITextView {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        heightThreshHold = defaultThreshHold
     }
     
     public override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        heightThreshHold = defaultThreshHold
+        setUpInitialValues()
+        setUpConstraints()
+        delegate = self
     }
     
     internal func setUpInitialValues() {
+        heightThreshHold = defaultThreshHold
         isScrollEnabled = false
         initialHeight = frame.size.height
     }
     
     internal func setUpConstraints() {
-        let threshHoldConstraint = heightAnchor.constraint(lessThanOrEqualToConstant: heightThreshHold)
+        threshHoldConstraint = heightAnchor.constraint(lessThanOrEqualToConstant: heightThreshHold)
         threshHoldConstraint.isActive = true
         
         textViewHeightConstraint = heightAnchor.constraint(equalToConstant: contentSize.height)
@@ -63,7 +69,6 @@ open class TextViewWithHeightThreshHold: UITextView {
         else if isIncreasing {
             textViewHeightConstraint.isActive = false
         }
-        lastCharCount = content.count
     }
     
     internal func recoverInitalState() {

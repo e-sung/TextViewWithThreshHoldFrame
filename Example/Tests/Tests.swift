@@ -1,28 +1,80 @@
 import XCTest
-import TextViewWithThreshHoldFrame
+import TextViewWithThreshHoldFrame_Example
+@testable import TextViewWithThreshHoldFrame
 
 class Tests: XCTestCase {
     
+    var sut: TextViewWithHeightThreshHold!
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = TextViewWithHeightThreshHold(frame: CGRect(x: 0, y: 0, width: 414, height: 33))
+        sut.text = ""
+        sut.heightThreshHold = 100
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testIsThreshHoldActive() {
+        sut.isHeightThreshHoldActive = true
+        XCTAssert(sut.isHeightThreshHoldActive)
+        sut.isHeightThreshHoldActive = false
+        XCTAssertFalse(sut.isHeightThreshHoldActive)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testIsIncreasing() {
+        sut.text = "a word"
+        XCTAssert(sut.isIncreasing )
+        
+        sut.text = "word"
+        XCTAssertFalse(sut.isIncreasing)
+    }
+
+    func testInit(){
+        sut = TextViewWithHeightThreshHold(frame: CGRect(x: 0, y: 0, width: 414, height: 33), textContainer: nil)
+        XCTAssert(sut.heightThreshHold == 100)
+        XCTAssertFalse(sut.isScrollEnabled)
+        XCTAssert(sut.initialHeight == 33)
+        XCTAssert(sut.isHeightThreshHoldActive)
+        XCTAssertFalse(sut.heightAnchor.constraint(equalToConstant: 33).isActive)
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    func testRecoverInitialState() {
+        sut.recoverInitalState()
+        XCTAssert(sut.isScrollEnabled == false)
+        XCTAssert(sut.frame.size.height == 33)
+    }
+    
+    func testTextViewDidChange() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateInitialViewController() as? TestViewController else {
+            XCTFail()
+            return
         }
+        _ = viewController.view
+        sut = viewController.textView
+        sut.text = "One Line"
+        XCTAssertFalse(sut.isScrollEnabled)
+        
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        sut.insertText("\n")
+        sut.sizeToFit()
+        XCTAssert(sut.isScrollEnabled)
+        
+        let range  = sut.textRange(from: sut.beginningOfDocument, to: sut.endOfDocument)!
+        sut.replace(range, withText: "one Line")
+        sut.sizeToFit()
+        XCTAssertFalse(sut.isScrollEnabled)
     }
+    
     
 }

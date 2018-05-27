@@ -1,8 +1,8 @@
 use_frameworks!
 
 target 'TextViewWithThreshHoldFrame_Example' do
-  pod 'TextViewWithThreshHoldFrame', :path => '../'
 
+  pod 'TextViewWithThreshHoldFrame', :path => '../'
   target 'TextViewWithThreshHoldFrame_Tests' do
     inherit! :search_paths
 

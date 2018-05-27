@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,50 +9,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TextViewWithThreshHoldFrame_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" id="vXZ-lx-hvc" customClass="TestViewController" customModule="TextViewWithThreshHoldFrame_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-4S-UWM">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="636" width="414" height="100"/>
                                 <color key="backgroundColor" red="0.42207820709999999" green="1" blue="0.39116443649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="20O-iA-jG8"/>
+                                    <constraint firstAttribute="height" constant="100" placeholder="YES" id="20O-iA-jG8"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-6X-Kx8">
-                                <rect key="frame" x="0.0" y="634" width="375" height="33"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-f2-fX1" customClass="TextViewWithHeightThreshHold" customModule="TextViewWithThreshHoldFrame">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
-                                        <color key="backgroundColor" red="0.62591005330000005" green="0.99751318389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="heightThreshHold">
-                                                <real key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-f2-fX1" customClass="TextViewWithHeightThreshHold" customModule="TextViewWithThreshHoldFrame">
+                                <rect key="frame" x="0.0" y="703" width="414" height="33"/>
+                                <color key="backgroundColor" red="0.62591005330000005" green="0.99751318389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="heightThreshHold">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xfT-6X-Kx8" secondAttribute="trailing" id="1ko-Ur-l1i"/>
                             <constraint firstAttribute="trailing" secondItem="qiL-4S-UWM" secondAttribute="trailing" id="9ci-Hl-7hE"/>
                             <constraint firstAttribute="bottom" secondItem="qiL-4S-UWM" secondAttribute="bottom" id="Ooy-mt-ojF"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xfT-6X-Kx8" secondAttribute="bottom" id="ZPo-pM-cXe"/>
+                            <constraint firstItem="E0i-f2-fX1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Yxj-tW-5oo"/>
                             <constraint firstItem="qiL-4S-UWM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fOP-AE-iE3"/>
-                            <constraint firstItem="xfT-6X-Kx8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wU8-00-p5j"/>
+                            <constraint firstAttribute="trailing" secondItem="E0i-f2-fX1" secondAttribute="trailing" id="qxA-7B-Uwi"/>
+                            <constraint firstAttribute="bottom" secondItem="E0i-f2-fX1" secondAttribute="bottom" id="zWf-Gh-zcJ"/>
                         </constraints>
                     </view>
                     <connections>
