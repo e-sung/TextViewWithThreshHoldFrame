@@ -28,18 +28,7 @@ open class TextViewWithHeightThreshHold: UITextView {
         setUpConstraints()
         delegate = self
     }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    public override init(frame: CGRect, textContainer: NSTextContainer?) {
-        super.init(frame: frame, textContainer: textContainer)
-        setUpInitialValues()
-        setUpConstraints()
-        delegate = self
-    }
-    
+
     internal func setUpInitialValues() {
         heightThreshHold = defaultThreshHold
         isScrollEnabled = false

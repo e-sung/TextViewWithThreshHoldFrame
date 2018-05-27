@@ -7,9 +7,13 @@ class Tests: XCTestCase {
     var sut: TextViewWithHeightThreshHold!
     override func setUp() {
         super.setUp()
-        sut = TextViewWithHeightThreshHold(frame: CGRect(x: 0, y: 0, width: 414, height: 33))
-        sut.text = ""
-        sut.heightThreshHold = 100
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateInitialViewController() as? TestViewController else {
+            XCTFail()
+            return
+        }
+        _ = viewController.view
+        sut = viewController.textView
     }
     
     func testIsThreshHoldActive() {
@@ -25,16 +29,6 @@ class Tests: XCTestCase {
         
         sut.text = "word"
         XCTAssertFalse(sut.isIncreasing)
-    }
-
-    func testInit(){
-        sut = TextViewWithHeightThreshHold(frame: CGRect(x: 0, y: 0, width: 414, height: 33), textContainer: nil)
-        XCTAssert(sut.heightThreshHold == 100)
-        XCTAssertFalse(sut.isScrollEnabled)
-        XCTAssert(sut.initialHeight == 33)
-        XCTAssert(sut.isHeightThreshHoldActive)
-        XCTAssertFalse(sut.heightAnchor.constraint(equalToConstant: 33).isActive)
-        
     }
     
     func testRecoverInitialState() {

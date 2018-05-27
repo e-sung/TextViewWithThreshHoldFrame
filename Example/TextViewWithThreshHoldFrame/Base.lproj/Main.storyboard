@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="636" width="414" height="100"/>
                                 <color key="backgroundColor" red="0.42207820709999999" green="1" blue="0.39116443649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" placeholder="YES" id="20O-iA-jG8"/>
+                                    <constraint firstAttribute="height" constant="100" id="20O-iA-jG8"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-f2-fX1" customClass="TextViewWithHeightThreshHold" customModule="TextViewWithThreshHoldFrame">
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
 </document>
