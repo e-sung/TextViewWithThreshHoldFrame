@@ -1,9 +1,11 @@
 import UIKit
 
+@IBDesignable
 open class TextViewWithHeightThreshHold: UITextView {
     
     /// Default = 100
-    public var heightThreshHold: CGFloat = 100
+    private let defaultThreshHold: CGFloat = 100
+    @IBInspectable public var heightThreshHold: CGFloat = 100
     public var isHeightThreshHoldActive : Bool {
         get { return textViewHeightConstraint.isActive }
         set { textViewHeightConstraint.isActive = newValue }
@@ -21,6 +23,16 @@ open class TextViewWithHeightThreshHold: UITextView {
         setUpInitialValues()
         setUpConstraints()
         delegate = self
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        heightThreshHold = defaultThreshHold
+    }
+    
+    public override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        heightThreshHold = defaultThreshHold
     }
     
     internal func setUpInitialValues() {

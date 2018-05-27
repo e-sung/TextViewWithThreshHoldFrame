@@ -28,21 +28,31 @@
                                     <constraint firstAttribute="height" constant="100" id="20O-iA-jG8"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-f2-fX1" customClass="TextViewWithHeightThreshHold" customModule="TextViewWithThreshHoldFrame">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-6X-Kx8">
                                 <rect key="frame" x="0.0" y="634" width="375" height="33"/>
-                                <color key="backgroundColor" red="0.62591005330000005" green="0.99751318389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-f2-fX1" customClass="TextViewWithHeightThreshHold" customModule="TextViewWithThreshHoldFrame">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                        <color key="backgroundColor" red="0.62591005330000005" green="0.99751318389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightThreshHold">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="E0i-f2-fX1" secondAttribute="trailing" id="6C6-1N-vHY"/>
+                            <constraint firstAttribute="trailing" secondItem="xfT-6X-Kx8" secondAttribute="trailing" id="1ko-Ur-l1i"/>
                             <constraint firstAttribute="trailing" secondItem="qiL-4S-UWM" secondAttribute="trailing" id="9ci-Hl-7hE"/>
                             <constraint firstAttribute="bottom" secondItem="qiL-4S-UWM" secondAttribute="bottom" id="Ooy-mt-ojF"/>
-                            <constraint firstItem="E0i-f2-fX1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ReN-lp-rug"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xfT-6X-Kx8" secondAttribute="bottom" id="ZPo-pM-cXe"/>
                             <constraint firstItem="qiL-4S-UWM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fOP-AE-iE3"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E0i-f2-fX1" secondAttribute="bottom" id="nYI-MF-Ifh"/>
+                            <constraint firstItem="xfT-6X-Kx8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wU8-00-p5j"/>
                         </constraints>
                     </view>
                     <connections>
