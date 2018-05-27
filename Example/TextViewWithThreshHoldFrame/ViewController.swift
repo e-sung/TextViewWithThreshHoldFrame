@@ -1,24 +1,11 @@
-//
-//  ViewController.swift
-//  TextViewWithThreshHoldFrame
-//
-//  Created by e-sung on 05/27/2018.
-//  Copyright (c) 2018 e-sung. All rights reserved.
-//
-
 import UIKit
+import TextViewWithThreshHoldFrame
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: TextViewWithHeightThreshHold!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textView.becomeFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-

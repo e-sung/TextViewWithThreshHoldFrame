@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F7E3AB5ACB2178E29E37053 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1F7E3AB5ACB2178E29E37053 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F1A6438412046753781C346 /* Pods-TextViewWithThreshHoldFrame_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewWithThreshHoldFrame_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextViewWithThreshHoldFrame_Tests/Pods-TextViewWithThreshHoldFrame_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3C7AD89F894C6E7AC4E6737A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3C7AD89F894C6E7AC4E6737A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		400D357B736F5FD0338F7AC4 /* Pods-TextViewWithThreshHoldFrame_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewWithThreshHoldFrame_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextViewWithThreshHoldFrame_Example/Pods-TextViewWithThreshHoldFrame_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE54174DC065D26917F2481 /* Pods-TextViewWithThreshHoldFrame_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewWithThreshHoldFrame_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextViewWithThreshHoldFrame_Example/Pods-TextViewWithThreshHoldFrame_Example.release.xcconfig"; sourceTree = "<group>"; };
 		534D087F4C85E9910705C3A9 /* Pods-TextViewWithThreshHoldFrame_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewWithThreshHoldFrame_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextViewWithThreshHoldFrame_Tests/Pods-TextViewWithThreshHoldFrame_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68AC4F401EA3565FE8789F03 /* Pods_TextViewWithThreshHoldFrame_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextViewWithThreshHoldFrame_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C172C959ED12A0585519820 /* TextViewWithThreshHoldFrame.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TextViewWithThreshHoldFrame.podspec; path = ../TextViewWithThreshHoldFrame.podspec; sourceTree = "<group>"; };
+		6C172C959ED12A0585519820 /* TextViewWithThreshHoldFrame.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TextViewWithThreshHoldFrame.podspec; path = ../TextViewWithThreshHoldFrame.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9383FA4292CA7011473416BD /* Pods_TextViewWithThreshHoldFrame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextViewWithThreshHoldFrame_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 

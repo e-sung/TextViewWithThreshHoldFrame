@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - TextViewWithThreshHoldFrame (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - TextViewWithThreshHoldFrame (from `../`)
+
+EXTERNAL SOURCES:
+  TextViewWithThreshHoldFrame:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  TextViewWithThreshHoldFrame: d995d72920f4fcfda0b13557065e299d45ef6f93
+
+PODFILE CHECKSUM: fa2ee4b574b0790813463e685acf2d93d4dc75e5
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,6 @@
+framework module Pods_TextViewWithThreshHoldFrame_Tests {
+  umbrella header "Pods-TextViewWithThreshHoldFrame_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

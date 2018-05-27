@@ -1,6 +1,5 @@
 # TextViewWithThreshHoldFrame
 
-[![CI Status](https://img.shields.io/travis/e-sung/TextViewWithThreshHoldFrame.svg?style=flat)](https://travis-ci.org/e-sung/TextViewWithThreshHoldFrame)
 [![Version](https://img.shields.io/cocoapods/v/TextViewWithThreshHoldFrame.svg?style=flat)](https://cocoapods.org/pods/TextViewWithThreshHoldFrame)
 [![License](https://img.shields.io/cocoapods/l/TextViewWithThreshHoldFrame.svg?style=flat)](https://cocoapods.org/pods/TextViewWithThreshHoldFrame)
 [![Platform](https://img.shields.io/cocoapods/p/TextViewWithThreshHoldFrame.svg?style=flat)](https://cocoapods.org/pods/TextViewWithThreshHoldFrame)

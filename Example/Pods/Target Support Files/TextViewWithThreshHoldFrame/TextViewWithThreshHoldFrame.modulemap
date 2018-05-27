@@ -1,0 +1,6 @@
+framework module TextViewWithThreshHoldFrame {
+  umbrella header "TextViewWithThreshHoldFrame-umbrella.h"
+
+  export *
+  module * { export * }
+}

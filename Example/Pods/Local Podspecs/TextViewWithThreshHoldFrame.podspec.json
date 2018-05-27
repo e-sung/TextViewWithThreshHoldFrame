@@ -1,0 +1,22 @@
+{
+  "name": "TextViewWithThreshHoldFrame",
+  "version": "0.1.0",
+  "summary": "A short description of TextViewWithThreshHoldFrame.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/e-sung/TextViewWithThreshHoldFrame",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "e-sung": "dev.esung@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/e-sung/TextViewWithThreshHoldFrame.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TextViewWithThreshHoldFrame/Classes/**/*"
+}
